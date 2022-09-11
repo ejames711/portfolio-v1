@@ -26,7 +26,7 @@ export default function Terminal(){
 
   setTimeout(() => {
     setIsInitialized(true)
-  },4500)
+  },3500)
   
 
     return(

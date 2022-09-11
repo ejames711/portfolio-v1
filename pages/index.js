@@ -5,9 +5,20 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Terminal from '../components/Terminal'
 import styles from '../styles/Home.module.css'
 import Intro from '../components/Intro';
-import Navbar from '../components/Navbar';
-import Layout from '../layouts/default-layout';
 
+const fadeIn = {
+  hidden: {
+    scale: .8,
+    opacity: 0,
+  },
+  visible: {
+    scale: 1,
+    opacity: 1,
+    transition: {
+      delay: .2
+    }
+  }
+}
 
 export default function Home() {
 
@@ -15,19 +26,26 @@ export default function Home() {
 
   setTimeout(() => {
     setIsComplete(true)
-  },5000)
+  },4000)
+
+  const [background,setBackground] = useState(false)
+
+    setTimeout(() => {
+        setBackground(true)
+      }, 4000)
 
   return (
-    <Layout>
+    <div className='flex flex-col justify-center items-center h-screen w-screen'>
       <Head>
         <title>Ethan Palas | Portfolio</title>
         <meta name="Portfolio website of Ethan Palas" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <video className={background ? "object-fill absolute w-full h-full -z-10" : "hidden"} autoPlay muted loop src='/assets/video.mp4' type="video/mp4" initial="hidden" animate="visible" variants={fadeIn} />
         <AnimatePresence>
           {!isComplete && <Terminal />}
           {isComplete && <Intro />}
         </AnimatePresence>
-    </Layout>
+    </div>
   )
 }
