@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: Ubuntu;
+  src: url('/assets/Ubuntu/Ubuntu-Medium.ttf');
+}
+
 @keyframes typing {
     from { width: 0 }
     to { width: 100% }
@@ -22,22 +27,3 @@
       blink .8s infinite;
 }
 
-.typed-out-second{
-    overflow: hidden;
-    border-right: .15em solid gray;
-    white-space: nowrap;
-    width: 0;
-    animation: 
-      typing 1.5s steps(25, end) forwards 3s,
-      blink .8s infinite;
-}
-
-.typed-out-third{
-    overflow: hidden;
-    border-right: .15em solid gray;
-    white-space: nowrap;
-    width: 0;
-    animation: 
-      typing 1.5s steps(25, end) forwards 4.5s,
-      blink .8s infinite;
-}
