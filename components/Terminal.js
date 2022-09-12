@@ -24,17 +24,12 @@ export default function Terminal(){
 
   const [isInitialized, setIsInitialized] = useState(false)
 
-  setTimeout(() => {
-    setIsInitialized(true)
-  },3500)
-  
-
     return(
       
-        <motion.div className="gap-5 rounded-lg h-2/5 w-3/5 lg:w-2/5 bg-black text-white drop-shadow-xl" initial="hidden" animate="visible" exit="exit" variants={fadeIn}>
+        <motion.div className="gap-5 rounded-lg h-1/3 md:h-1/2 w-3/4 lg:w-2/5 bg-black text-white drop-shadow-[0_10px_10px_rgb(200,200,200,0.25)]" initial="hidden" animate="visible" exit="exit" variants={fadeIn}>
             <p>EthOS $[Version 1.0]</p>
             <div className='inline-block'>
-                <p className='typed-out text-xl md:text-3xl'>{isInitialized ? "Complete..." : "Initializing EthOS..."}</p>
+                <p className='typed-out text-xl md:text-6xl'>Initializing EthOS...</p>
             </div>
         </motion.div>
       

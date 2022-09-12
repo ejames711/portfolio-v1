@@ -7,6 +7,7 @@ module.exports = {
   theme: {
     fontFamily : {
       'ubuntu': ['Ubuntu'],
+      'custom_roboto': ['roboto'],
     },
     extend: {
     },

@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Terminal from '../components/Terminal'
 import styles from '../styles/Home.module.css'
 import Intro from '../components/Intro';
+import Nav from '../components/Nav';
 
 const fadeIn = {
   hidden: {
@@ -35,13 +36,13 @@ export default function Home() {
       }, 4000)
 
   return (
-    <div className='flex flex-col justify-center items-center h-screen w-screen'>
+    <div className='flex flex-col justify-center items-center h-screen w-screen bg-zinc-800'>
       <Head>
         <title>Ethan Palas | Portfolio</title>
         <meta name="Portfolio website of Ethan Palas" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <video className={background ? "object-fill absolute w-full h-full -z-10" : "hidden"} autoPlay muted loop src='/assets/video.mp4' type="video/mp4" initial="hidden" animate="visible" variants={fadeIn} />
+      <video className={background ? "object-fill absolute w-full h-full" : "hidden"} autoPlay muted loop src='/assets/video.mp4' type="video/mp4" initial="hidden" animate="visible" variants={fadeIn} />
         <AnimatePresence>
           {!isComplete && <Terminal />}
           {isComplete && <Intro />}
