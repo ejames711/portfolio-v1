@@ -42,7 +42,7 @@ export default function Home() {
         <meta name="Portfolio website of Ethan Palas" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <video className={background ? "object-fill absolute w-full h-full" : "hidden"} autoPlay muted loop src='/assets/video.mp4' type="video/mp4" initial="hidden" animate="visible" variants={fadeIn} />
+      <video className={background ? "object-fill absolute w-full h-full" : "hidden"} autoPlay muted loop src='/assets/video.mp4' type="video/mp4" />
         <AnimatePresence>
           {!isComplete && <Terminal />}
           {isComplete && <Intro />}
