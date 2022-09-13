@@ -7,36 +7,22 @@ import styles from '../styles/Home.module.css'
 import Intro from '../components/Intro';
 import Nav from '../components/Nav';
 
-const fadeIn = {
-  hidden: {
-    scale: .8,
-    opacity: 0,
-  },
-  visible: {
-    scale: 1,
-    opacity: 1,
-    transition: {
-      delay: .2
-    }
-  }
-}
-
 export default function Home() {
 
   const [isComplete, setIsComplete] = useState(false)
 
   setTimeout(() => {
     setIsComplete(true)
-  },4000)
+  },3000)
 
   const [background,setBackground] = useState(false)
 
     setTimeout(() => {
         setBackground(true)
-      }, 4000)
+      }, 3000)
 
   return (
-    <div className='flex flex-col justify-center items-center h-screen w-screen bg-zinc-800'>
+    <div className='flex flex-col justify-center items-center h-screen w-screen bg-black'>
       <Head>
         <title>Ethan Palas | Portfolio</title>
         <meta name="Portfolio website of Ethan Palas" />

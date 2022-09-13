@@ -26,10 +26,9 @@ export default function Terminal(){
 
     return(
       
-        <motion.div className="gap-5 rounded-lg h-1/3 md:h-1/2 w-3/4 lg:w-2/5 bg-black text-white drop-shadow-[0_10px_10px_rgb(200,200,200,0.25)]" initial="hidden" animate="visible" exit="exit" variants={fadeIn}>
-            <p>EthOS $[Version 1.0]</p>
+        <motion.div className="flex items-center justify-center z-10 gap-5 rounded-lg w-1/3 bg-black text-white" initial="hidden" animate="visible" exit="exit" variants={fadeIn}>
             <div className='inline-block'>
-                <p className='typed-out text-xl md:text-6xl'>Initializing EthOS...</p>
+                <p className='h-1/2 typed-out text-4xl md:text-6xl'>Initialize EthOS...</p>
             </div>
         </motion.div>
       
