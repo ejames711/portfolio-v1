@@ -26,10 +26,10 @@ export default function Terminal(){
 
     return(
       
-        <motion.div className="flex items-center justify-center z-10 gap-5 rounded-lg w-1/3 bg-black text-white" initial="hidden" animate="visible" exit="exit" variants={fadeIn}>
+        <motion.div className="flex items-center justify-center z-10 gap-5 rounded-lg h-full w-1/3 bg-black text-white overflow-hidden" initial="hidden" animate="visible" exit="exit" variants={fadeIn}>
             <div className='inline-block'>
                 <p className='h-1/2 typed-out text-4xl md:text-6xl'>Initialize EthOS...</p>
-            </div>
+          </div>
         </motion.div>
       
     )

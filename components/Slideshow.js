@@ -4,7 +4,7 @@ import { useState } from "react"
 let i = 0
 
 export default function Slideshow() {
-    const imgNames = ['react','nextjs','python','solidity','vercel','godot']
+    const imgNames = ['react','nextjs','python','solidity','vercel']
     const [imgSrc,setImgSrc] = useState(`/assets/img/${imgNames[0]}.svg`);
 
     function forwardClick() {

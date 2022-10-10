@@ -5,7 +5,7 @@ import Slideshow from "../components/Slideshow"
 export default function About(){
     return (
         <div className="flex flex-col h-screen w-screen items-center justify-center text-white text-center bg-black font-ubuntu">
-            <video className={"object-fill absolute w-full h-full"} autoPlay muted loop src='/assets/video.mp4' type="video/mp4" />
+            {/* <video className={"object-fill absolute w-full h-full"} autoPlay muted loop src='/assets/video.mp4' type="video/mp4" /> */}
             <div className="flex justify-self-start opacity-80 z-10 gap-10 md:gap-20">
                 <Link href='/'><a className="text-white text-3xl md:text-5xl lg:text-7xl font-ubuntu">Home</a></Link>
                 <Link href='/projects'><a className="text-white text-3xl md:text-5xl lg:text-7xl font-ubuntu">Projects</a></Link>
