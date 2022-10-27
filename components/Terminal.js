@@ -1,4 +1,4 @@
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion} from 'framer-motion';
 import { useState } from 'react';
 
 
@@ -26,10 +26,10 @@ export default function Terminal(){
 
     return(
       
-        <motion.div className="flex items-center justify-center z-10 gap-5 rounded-lg w-1/3 bg-black text-white" initial="hidden" animate="visible" exit="exit" variants={fadeIn}>
+        <motion.div className="z-10 flex items-center justify-center w-full h-full overflow-hidden text-white bg-black rounded-lg" initial="hidden" animate="visible" exit="exit" variants={fadeIn}>
             <div className='inline-block'>
-                <p className='h-1/2 typed-out text-4xl md:text-6xl'>Initialize EthOS...</p>
-            </div>
+                <p className='text-4xl h-1/2 typed-out md:text-6xl'>Initialize EthOS...</p>
+          </div>
         </motion.div>
       
     )

@@ -11,19 +11,22 @@ const fadeIn = {
       scale: 1,
       opacity: .8,
       transition: {
-        delay: .2
+        delay: .2,
+        duration: 1,
       }
     }
   }
 
 export default function Intro() {
     return(
-        <motion.div className='flex flex-col md:flex-row items-center justify-evenly rounded-lg text-center md:text-justify h-1/2 md:h-2/3 w-3/4 md:w-screen lg:w-5/6 bg-zinc-900' initial="hidden" animate="visible" variants={fadeIn}>
-            <div className='flex flex-col md:gap-4 justify-center text-white'>
+        <motion.div id='intro' className='flex flex-col items-center w-3/4 gap-4 mt-20 text-center justify-evenly md:flex-row' initial="hidden" animate="visible" variants={fadeIn}>
+            <div className='flex flex-col justify-center w-full h-full text-white md:gap-4'>
                 <h1 className='text-4xl md:text-8xl font-ubuntu' >Ethan Palas</h1>
-                <h2 className='text-2xl md:text-6xl xl:text-7xl font-sans' >Freelance Developer</h2>
+                <h2 className='font-sans text-2xl md:ml-20 md:text-5xl' >Freelance Developer</h2>
             </div>
-            <Nav />
+            <motion.div className='flex items-center justify-center w-full h-full' initial={{y: -10}} animate={{y: 10}} transition={{type: 'spring', stiffness: 10, repeat: Infinity, repeatType: 'reverse'}}>
+              <img src='/assets/img/eth.svg' className='w-full h-full'/>
+            </motion.div>
         </motion.div>
     )
 }
