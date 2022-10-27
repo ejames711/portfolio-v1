@@ -4,7 +4,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Particles from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
 import Terminal from '../components/Terminal'
-import styles from '../styles/Home.module.css'
 import Intro from '../components/Intro';
 import Nav from '../components/Nav';
 import About from "../components/About"
@@ -15,9 +14,6 @@ export default function Home() {
 
   const particlesInit = useCallback(async (engine) => {
     console.log(engine);
-    // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
-    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-    // starting from v2 you can add only the features you need reducing the bundle size
     await loadFull(engine);
   }, []);
 
@@ -38,7 +34,7 @@ export default function Home() {
       }, 3000)
 
   return (
-    <div className='flex flex-col items-center justify-between w-screen h-screen gap-40 overflow-x-hidden bg-black'>
+    <div className='flex flex-col items-center justify-between w-screen h-screen overflow-x-hidden bg-black'>
       <Head>
         <title>Ethan Palas | Portfolio</title>
         <meta name="Portfolio website of Ethan Palas" />
