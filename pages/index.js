@@ -38,7 +38,7 @@ export default function Home() {
       <Head>
         <title>Ethan Palas | Portfolio</title>
         <meta name="Portfolio website of Ethan Palas" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/assets/computer-white.svg" />
       </Head>
       <Particles
       id="tsparticles"
