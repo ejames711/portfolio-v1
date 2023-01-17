@@ -17,6 +17,7 @@ export default function Card() {
                     <li>Tailwind</li>
                     <li>PokeAPI</li>
                     <li>Nodemailer</li>
+                    <li>Supabase</li>
                 </ul>
                 <p className="text-xs w-72 opacity-80">Manages cart state with Redux. Calls PokeAPI for card info. Uses Nodemailer and Next API route to send mock email receipt at checkout.</p>
             </div>
